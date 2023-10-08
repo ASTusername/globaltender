@@ -16,7 +16,7 @@ import java.time.Duration;
 
 import static java.lang.Thread.sleep;
 
-public class Registration extends Data {
+public class Registration{
 
     private By btnLogin = By.xpath("//div[@class='col-lg-auto ml-auto d-flex align-items-center justify-space-between flex-wrap']//a[@class='btn btn-outline-azure btn-square']");
     private By inputRole = By.xpath("//input[@value='participant']/..");
@@ -175,5 +175,4 @@ public class Registration extends Data {
         String actualroleAlertMessage = driver.findElement(textDanger).getText();
         Assert.assertEquals(getDate.roleAlertMessage, actualroleAlertMessage);
     }
-
 }
